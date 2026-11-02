@@ -4,70 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PJ LAUNDROMAT - Your Clean & Convenient Refuge | Ruiru</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f7fbff}
-.top{background:#08307a;color:#fff;padding:8px;text-align:center;font-size:13px}
-.hero{padding:40px 5%;background:linear-gradient(180deg,#eaf2ff,#fff);text-align:center}
-.hero h1{color:#0b3fa8;font-size:42px;font-weight:900}
-.badge{background:#0b3fa8;color:#fff;padding:10px 20px;border-radius:30px;display:inline-block;margin:8px;font-weight:700}
-.badge-orange{background:#ff7a00}
-.btn{padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:700;display:inline-block;margin:6px}
+:root{--blue:#0b3fa8;--dark-blue:#08307a;--light-blue:#e8f0ff;--orange:#ff7a00}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f7fbff;color:#222}
+.top-bar{background:#08307a;color:#fff;padding:8px 5%;display:flex;justify-content:space-between;flex-wrap:wrap;font-size:13px}
+nav{background:#fff;box-shadow:0 2px 15px rgba(0,0,0,0.08);padding:12px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:99}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;color:#0b3fa8;font-size:28px}
+.logo .pj{width:48px;height:48px;background:linear-gradient(135deg,#0b3fa8,#4a8cff);border-radius:50%;display:grid;place-items:center;color:#fff}
+.logo small{display:block;font-size:11px;color:#ff7a00;margin-top:-4px}
+.nav-links a{margin-left:18px;text-decoration:none;color:#333;font-weight:600;font-size:14px}
+.nav-links a.cta{background:#0b3fa8;color:#fff;padding:10px 18px;border-radius:30px}
+.hero{padding:40px 5%;background:linear-gradient(105deg,#eaf2ff 0%,#fff 55%,#eaf2ff 100%);display:grid;grid-template-columns:1.2fr 0.8fr;gap:30px;align-items:center}
+.hero h1{font-size:44px;line-height:1.1;color:#0b3fa8;font-weight:800}
+.hero h1 span{color:#ff7a00}
+.badge{background:#0b3fa8;color:#fff;display:inline-flex;padding:10px 18px;border-radius:30px;font-weight:700;margin:10px 0}
+.badge.orange{background:#ff7a00}
+.hero-img{border-radius:20px;overflow:hidden;box-shadow:0 15px 40px rgba(11,63,168,0.2)} .hero-img img{width:100%;display:block}
+.services{padding:50px 5%;background:#fff;text-align:center}
+.section-title{font-size:32px;color:#0b3fa8;font-weight:800;margin-bottom:8px}
+.grid-5{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;margin-top:20px}
+.s-card{background:#e8f0ff;padding:20px;border-radius:16px}
+.s-card .icon{width:60px;height:60px;background:#0b3fa8;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;color:#fff;font-weight:800}
+.prices{padding:50px 5%;background:linear-gradient(#f0f6ff,#fff)}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:20px}
+.p-item{background:#fff;border:2px solid #dbe8ff;border-radius:14px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center}
+.p-item .bob{background:#0b3fa8;color:#fff;padding:6px 12px;border-radius:20px;font-weight:700;font-size:14px}
+.location{padding:50px 5%;display:grid;grid-template-columns:1fr 1fr;gap:30px;background:#fff}
+.map{border-radius:16px;overflow:hidden;height:340px;background:#eaf2ff}
+.btn{display:inline-block;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:700;margin:6px 6px 0 0}
 .btn-blue{background:#0b3fa8;color:#fff} .btn-orange{background:#ff7a00;color:#fff}
-.prices{padding:40px 5%;background:#fff}
-.price-box{border:2px solid #dbe8ff;border-radius:12px;padding:14px;display:flex;justify-content:space-between;margin:8px 0;background:#fff}
-.bob{background:#0b3fa8;color:#fff;padding:6px 12px;border-radius:20px;font-weight:700}
-.location{padding:40px 5%;background:#f0f6ff;text-align:center}
-.trust{background:#08307a;color:#fff;padding:20px 5%;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;text-align:center}
-footer{background:#061e52;color:#bcd0ff;padding:20px;text-align:center;font-size:13px}
+.btn-outline{border:2px solid #0b3fa8;color:#0b3fa8}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;background:#08307a;color:#fff;padding:30px 5%}
+footer{background:#061e52;color:#bcd0ff;padding:30px 5%;text-align:center;font-size:13px}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:28px;box-shadow:0 6px 20px rgba(0,0,0,0.3);text-decoration:none}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.location{grid-template-columns:1fr}.nav-links{display:none}.hero h1{font-size:32px}}
 </style>
 </head>
 <body>
-<div class="top">Opposite Law Court, Ruiru | 0719 144193 | Paybill 542542 Acc 776193</div>
-
-<div class="hero">
-<h1>PJ LAUNDROMAT</h1>
-<p style="font-size:18px;color:#0b3fa8;font-weight:700;margin:10px 0">"Your Clean & Convenient Refuge"</p>
-<div class="badge">0719 144193</div>
-<div class="badge badge-orange">LOCATED IN RUIRU</div>
-<div style="margin-top:10px">
-<span class="badge badge-orange">OPPOSITE LAW COURT, RUIRU</span>
+<div class="top-bar"><span>Opposite Law Court, Ruiru - OPEN DAILY 8AM-8PM</span><span>0719 144193 | Paybill 542542 Acc 776193</span></div>
+<nav><div class="logo"><div class="pj">PJ</div><div>PJ LAUNDROMAT<small>Your Clean & Convenient Refuge</small></div></div><div class="nav-links"><a href="#services">Services</a><a href="#prices">Prices</a><a href="#location">Location</a><a href="tel:0719144193" class="cta">Call Now</a></div></nav>
+<section class="hero">
+<div>
+<div class="badge">CLEANER CLOTHES, BETTER LIFE</div>
+<h1>CLEAN CLOTHES,<br>BETTER <span>LIFE</span></h1>
+<p style="margin:15px 0;font-size:18px;color:#444"><strong>Fast - Affordable - Reliable</strong><br>Your Clean & Convenient Refuge in Ruiru.</p>
+<a class="btn btn-blue" href="https://wa.me/254719144193?text=Hi%20PJ%20Laundromat" target="_blank">WhatsApp Us</a>
+<a class="btn btn-orange" href="tel:0719144193">0719 144193</a>
+<div style="margin-top:18px"><span class="badge orange">Opposite Law Court, Ruiru</span><span class="badge" style="background:#fff;color:#0b3fa8;border:2px solid #0b3fa8">Paybill 542542 Acc 776193</span></div>
 </div>
-<h2 style="margin-top:20px;color:#0b3fa8">CLEAN CLOTHES, BETTER LIFE</h2>
-<p>Fast • Affordable • Reliable</p>
-<div style="margin-top:15px">
-<a class="btn btn-blue" href="tel:0719144193">Call Now</a>
-<a class="btn btn-orange" href="https://wa.me/254719144193">WhatsApp</a>
-</div>
-</div>
-
-<div class="prices">
-<h2 style="text-align:center;color:#0b3fa8">OUR PRICES</h2>
-
-<div class="price-box"><span><b>1kg Laundry</b></span><span class="bob">90 BOB</span></div>
-<div class="price-box"><span><b>White Bedsheets</b></span><span class="bob">100 BOB</span></div>
-<div class="price-box"><span><b>White Towels</b></span><span class="bob">150 BOB</span></div>
-<div class="price-box"><span><b>Duvet</b></span><span class="bob">FROM 500 BOB</span></div>
-<div class="price-box"><span><b>Shoes</b></span><span class="bob">100 BOB</span></div>
-<div class="price-box"><span><b>White Shoes</b></span><span class="bob">150 BOB</span></div>
-<div class="price-box"><span><b>Suit</b></span><span class="bob">500 BOB</span></div>
-<div class="price-box"><span><b>Curtains (A Pair)</b></span><span class="bob">200 BOB</span></div>
-
-<div class="price-box" style="background:#fff3e6"><span><b>Lipa na Mpesa<br><small>Paybill 542542 Acc 776193</small></b></span><span class="bob" style="background:#ff7a00">M-PESA</span></div>
-</div>
-
-<div class="location">
-<h2 style="color:#0b3fa8">Located in Ruiru</h2>
-<h3 style="color:#ff7a00">OPPOSITE LAW COURT, RUIRU</h3>
-<p style="margin:15px 0">Clean & Safe | Easy & Convenient | Eco-Friendly | Locally Trusted</p>
-<a class="btn btn-blue" href="https://maps.app.goo.gl/yX4pvkhQhj2ozAKE9" target="_blank">Open in Google Maps</a>
-<p style="margin-top:15px"><b>Paybill:</b> 542542<br><b>Account:</b> 776193<br><b>Phone:</b> 0719 144193</p>
-</div>
-
-<footer>
-<strong>PJ LAUNDROMAT</strong> - Your Clean & Convenient Refuge<br>
-0719 144193 | Opposite Law Court, Ruiru | Paybill 542542 Acc 776193<br><br>
-© 2026 PJ Laundromat Ruiru
-</footer>
+<div class="hero-img"><img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?q=80&w=800" alt="Laundromat"></div>
+</section>
+<section class="services" id="services"><h2 class="section-title">CLEAN CLOTHES, BETTER LIFE</h2><p>Fast • Affordable • Reliable</p><div class="grid-5"><div class="s-card"><div class="icon">W</div><h4>WASH & DRY</h4></div><div class="s-card"><div class="icon">I</div><h4>IRONING</h4></div><div class="s-card"><div class="icon">F</div><h4>FOLDING</h4></div><div class="s-card"><div class="icon">P</div><h4>PREMIUM CARE</h4></div><div class="s-card"><div class="icon">T</div><h4>SAVE TIME</h4></div></div></section>
+<section class="prices" id="prices"><h2 class="section-title" style="text-align:center">OUR PRICES</h2><div class="price-grid"><div><div class="p-item"><span><strong>1kg Laundry</strong></span><span class="bob">KSH 90</span></div><div class="p-item"><span><strong>White Bedsheets</strong></span><span class="bob">KSH 100</span></div><div class="p-item"><span><strong>White Towels</strong></span><span class="bob">KSH 150</span></div></div><div><div class="p-item"><span><strong>Duvet</strong></span><span class="bob">FROM KSH 500</span></div><div class="p-item"><span><strong>Shoes</strong></span><span class="bob">KSH 100</span></div><div class="p-item"><span><strong>White Shoes</strong></span><span class="bob">KSH 150</span></div></div><div><div class="p-item"><span><strong>Suit</strong></span><span class="bob">KSH 500</span></div><div class="p-item"><span><strong>Curtains (Pair)</strong></span><span class="bob">KSH 200</span></div><div class="p-item" style="background:#fff3e6"><span><strong>Lipa na Mpesa<br><small>Paybill 542542 Acc 776193</small></strong></span><span class="bob" style="background:#ff7a00">M-PESA</span></div></div></div></section>
+<section class="location" id="location"><div><h2 class="section-title">Located in Ruiru</h2><h3 style="color:#ff7a00">OPPOSITE LAW COURT, RUIRU</h3><p style="margin:15px 0">Come visit us today for clean, safe, and eco-friendly laundry services. Open Daily 8AM - 8PM.</p><a class="btn btn-blue" href="https://maps.app.goo.gl/yX4pvkhQhj2ozAKE9" target="_blank">Open in Google Maps</a><a class="btn btn-outline" href="tel:0719144193">Call 0719 144193</a><div style="margin-top:20px"><h4>Payment:</h4><p><strong>Paybill:</strong> 542542<br><strong>Account:</strong> 776193</p></div></div><div class="map"><iframe src="https://www.google.com/maps?q=Ruiru+Law+Court&z=15&output=embed" width="100%" height="100%" style="border:0" loading="lazy"></iframe></div></section>
+<div class="trust"><div><h4>CLEAN & SAFE</h4><p>Hygienic & trusted</p></div><div><h4>EASY & CONVENIENT</h4><p>Simple & excellent</p></div><div><h4>ECO-FRIENDLY</h4><p>Caring for planet</p></div><div><h4>LOCALLY TRUSTED</h4><p>Serving Ruiru community</p></div></div>
+<footer><strong>PJ LAUNDROMAT</strong> - Your Clean & Convenient Refuge<br>0719 144193 | Opposite Law Court, Ruiru | Paybill 542542 Acc 776193 | OPEN DAILY 8AM-8PM<br><br>© 2026 PJ Laundromat</footer>
+<a class="whatsapp" href="https://wa.me/254719144193" target="_blank">💬</a>
 </body>
 </html>
